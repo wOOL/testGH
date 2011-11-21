@@ -6,11 +6,6 @@ heuristicFactor = 5;
 evaporationCoef = 0.1;
 pheromoneBoost = 100;
 
-dis = zeros(50,1);
 tic;
-for i=1:50
-    [Route,Distance] = TSP_AC(D,numIterations,numAnts,pheromoneFactor,heuristicFactor,evaporationCoef,pheromoneBoost);
-    dis(i) = Distance;
-end;
+[Route,Distance] = TSP_AC(D,numIterations,numAnts,pheromoneFactor,heuristicFactor,evaporationCoef,pheromoneBoost);
 toc;
-hist(dis);
